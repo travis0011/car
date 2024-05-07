@@ -3,10 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Website</title>
+    <title>이벤트 페이지</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        p {
+            text-align: justify;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, GitHub Pages!</h1>
-    <p>This is my first website hosted on GitHub Pages.</p>
+    <div class="container">
+        <h1>우리 동네 이벤트</h1>
+        <p>우리 동네에서 열리는 특별한 이벤트에 참여해보세요!</p>
+        
+        <h2>이벤트 설명</h2>
+        <p>이 이벤트는 동네 주민들을 위한 커뮤니티 행사로, 다양한 활동과 먹거리가 제공될 예정입니다. 자세한 내용은 아래에서 확인하세요.</p>
+        
+        <h2>일정</h2>
+        <p>날짜: 2024년 6월 15일 (토요일)<br>
+           시간: 오전 10시부터 오후 4시까지<br>
+           장소: 동네 공원</p>
+        
+        <h2>참가 신청</h2>
+        <form action="submit.php" method="POST">
+            <label for="name">이름:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">이메일:</label>
+            <input type="text" id="email" name="email" required><br>
+            <label for="message">메시지:</label>
+            <textarea id="message" name="message" rows="4" required></textarea><br>
+            <input type="submit" value="신청하기">
+        </form>
+    </div>
 </body>
 </html>
